@@ -1,41 +1,26 @@
-## Exercise #5 - Data Modeling for Postgres + Python.
+# Postgres Data Modeling with Python
 
-In this fifth exercise you will work on a few different topics,
-data modeling, Python, and Postgres. These are common problems worked 
-on in data engineering.
+This project demonstrates how to design a PostgreSQL data model with proper schema constraints, and load CSV data into the database using Python and the `psycopg2` library.
 
-#### Setup
-1. Change directories at the command line 
-   to be inside the `Exercise-5` folder `cd Exercises/Exercise-5`
-   
-2. Run `docker build --tag=exercise-5 .` to build the `Docker` image.
+## 🚀 Project Overview
 
-3. There is a file called `main.py` in the `Exercise-5` directory, this
-is where you `Python` code to complete the exercise should go.
-   
-4. Once you have finished the project or want to test run your code,
-   run the following command `docker-compose up run` from inside the `Exercises/Exercise-5` directory
+- 🧱 Design and implement PostgreSQL `CREATE TABLE` statements with proper data types, indexes, primary and foreign keys.
+- 🔌 Use Python and `psycopg2` to connect to Postgres.
+- 📄 Ingest and load data from CSV files into the tables.
 
-#### Problems Statement
-There is a folder called `data` in this current directory, `Exercises/Exercise-5`. There are also
-3 `csv` files located in that folder. Open each one and examine it, the 
-first task is to create a `sql` script with the `DDL` to hold
-a `CREATE` statement for each data file. Remember to think about data types. 
-Also, this `CREATE` statements should include indexes for each table, as well
-as primary and foreign keys.
+## 🛠️ Tech Stack
 
-After you have finished this `sql` scripts, we must connect to `Postgres` using the `Python` package
-called `psycopg2`. Once connected we will run our `sql` scripts against the database.
+- Python 3
+- PostgreSQL
+- psycopg2
+- Docker & Docker Compose
 
-Note: The default `main.py` script already has the Python connection configured to connect
-to the `Postgres` instance that is automatically spun up by `Docker` when you ran
-the `docker-compose up run` command (inside `Exercises/Exercise-5` directory).
+## 📦 Setup Instructions
 
-Finally, we will use `psycopg2` to insert the data in each `csv` file into the table you created.
+### 1. Clone the Repository
 
-Generally, your script should do the following ...
-1. Examine each `csv` file in `data` folder. Design a `CREATE` statement for each file.
-2. Ensure you have indexes, primary and forgein keys.
-3. Use `psycopg2` to connect to `Postgres` on `localhost` and the default `port`.
-4. Create the tables against the database.
-5. Ingest the `csv` files into the tables you created, also using `psycopg2`.
+```bash
+git clone https://github.com/your-username/postgres-data-modeling-python.git
+cd postgres-data-modeling-python
+docker build --tag=exercise-5 .
+docker-compose up
